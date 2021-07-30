@@ -14,7 +14,240 @@
       {
         "title": "tittle",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 180,
+                "y": 177
+              },
+              "angle": 0,
+              "id": "c1ef022b-aec9-4f5e-86c0-b76d787814eb",
+              "z": 1,
+              "hasOpenThreats": true,
+              "privilegeLevel": "Admin",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Session hijacking",
+                  "type": "Tampering",
+                  "description": "sessio voidaan ottaa haltuun koska ei ole kryptattu sessio tokenia",
+                  "mitigation": "HUolehditaan end-to-end cryptayksesta"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Tunnistautumin\nen"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 96,
+                "y": 430
+              },
+              "angle": 0,
+              "id": "692927f5-a664-47cd-8345-c987e49eac0c",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "SSC"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 347,
+                "y": 432
+              },
+              "angle": 0,
+              "id": "8c842377-3bf7-4fef-a89d-d2ad06a87842",
+              "z": 3,
+              "hasOpenThreats": false,
+              "storesCredentials": true,
+              "isEncrypted": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "MSSQL"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "c1ef022b-aec9-4f5e-86c0-b76d787814eb"
+              },
+              "target": {
+                "id": "692927f5-a664-47cd-8345-c987e49eac0c"
+              },
+              "vertices": [
+                {
+                  "x": 91,
+                  "y": 269
+                },
+                {
+                  "x": 25,
+                  "y": 308
+                },
+                {
+                  "x": 16,
+                  "y": 391
+                }
+              ],
+              "id": "2d8265de-1fa4-485c-ba7e-55b9da5d318a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 3",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 404,
+                "y": 185
+              },
+              "angle": 0,
+              "id": "d6b0155e-09f0-4029-bf4e-3a9d306fb4c8",
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "process 4"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 550,
+                "y": 431
+              },
+              "angle": 0,
+              "id": "76d33049-9586-4a39-b8fc-ff1892a5821b",
+              "z": 6,
+              "hasOpenThreats": false,
+              "isALog": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "LOG space"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8c842377-3bf7-4fef-a89d-d2ad06a87842"
+              },
+              "target": {
+                "id": "c1ef022b-aec9-4f5e-86c0-b76d787814eb"
+              },
+              "vertices": [],
+              "id": "4ec3fb83-b00b-4cc9-b2eb-482932c750f5",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "LDAP yhteys",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 845
+        }
       }
     ],
     "reviewer": ""
