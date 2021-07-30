@@ -5,7 +5,11 @@
     "description": "fefefe"
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "jojo"
+      }
+    ],
     "diagrams": [
       {
         "title": "tittle",
